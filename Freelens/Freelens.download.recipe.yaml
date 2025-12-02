@@ -1,0 +1,16 @@
+Description: Downloads the latest version of Freelens from GitHub
+Identifier: com.github.robochau01.download.freelens
+MinimumVersion: '2.3'
+
+Input:
+    NAME: Freelens
+
+Process:
+    - Processor: GithubReleasesInfoProvider
+      Arguments:
+          repo: FreelensApp/Freelens
+          asset_regex: 'Freelens-*.macos-arm64.dmg'
+    - Processor: URLDownloader
+      Arguments:
+          filename: '%NAME%-%version%.macos-arm64.dmg'
+    - Processor: EndOfCheckPhase
