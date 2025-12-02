@@ -6,11 +6,8 @@ Input:
     NAME: Freelens
 
 Process:
-    - Processor: GithubReleasesInfoProvider
-      Arguments:
-          repo: FreelensApp/Freelens
-          asset_regex: 'Freelens-*.macos-arm64.dmg'
     - Processor: URLDownloader
       Arguments:
+          url: https://github.com/freelensapp/freelens/releases/latest
           filename: '%NAME%-%version%.macos-arm64.dmg'
     - Processor: EndOfCheckPhase
