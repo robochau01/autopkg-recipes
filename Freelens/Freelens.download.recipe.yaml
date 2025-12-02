@@ -8,7 +8,7 @@ Input:
 Process:
     - Processor: GithubReleasesInfoProvider
       Arguments:
-          githu_repo: freelensapp/freelens
+          githu_repo: 'freelensapp/freelens'
           asset_regex: '^Freelens-*.macos-arm64.dmg$'
     - Processor: URLDownloader
       Arguments:
