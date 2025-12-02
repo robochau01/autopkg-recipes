@@ -4,13 +4,12 @@ MinimumVersion: '2.3'
 
 Input:
     NAME: Freelens
+    DOWNLOAD_URL: 'https://github.com/freelensapp/freelens/releases/download/v1.6.2/Freelens-1.6.2-macos-arm64.pkg'
 
 Process:
-    - Processor: GithubReleasesInfoProvider
-      Arguments:
-          githu_repo: 'freelensapp/freelens'
-          asset_regex: '^Freelens-*.macos-arm64.dmg$'
     - Processor: URLDownloader
       Arguments:
-          filename: '%NAME%-%version%.macos-arm64.dmg'
+          url: '%DOWNLOAD_URL%'
+          filename: '%NAME%-latest.pkg'
     - Processor: EndOfCheckPhase
+    
