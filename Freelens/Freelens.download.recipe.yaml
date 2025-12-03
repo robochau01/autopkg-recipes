@@ -8,7 +8,7 @@ Description: |
 
   Note: This recipe targets ARM64 (Apple Silicon) by default. For Intel builds,
   change the asset_regex to .*amd64_mac.dmg$ or .*macos-amd64.dmg$
-Identifier: com.github.smithjw-actions.download.FreeLens
+Identifier: com.github.robochau01.download.freelens
 MinimumVersion: '2.3'
 
 Input:
